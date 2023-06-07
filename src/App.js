@@ -8,8 +8,13 @@ import * as React from "react";
 class List extends React.Component {
   render() {
     // Render a list using the "friends" being passed in.
+    const {friends} = this.props
 
-    return <ul></ul>;
+    return <ul>{
+      friends.map((friend => (
+        <li>{friend.id}  {friend.name}</li>
+      )))
+      }</ul>;
   }
 }
 
